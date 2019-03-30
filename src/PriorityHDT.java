@@ -15,26 +15,28 @@ public class PriorityHDT {
 
 
     public static void main(String[] args) throws IOException{
-//        VectorHeapp<Paciente> vh = new VectorHeapp<Paciente>();
+        VectorHeapp<Paciente> vh2 = new VectorHeapp<Paciente>();
         PriorityQueue<Paciente> vh = new PriorityQueue<Paciente>();
         Scanner scan = new Scanner(System.in);
         StringTokenizer tokenizer = new StringTokenizer(getDataFile(), Delim);
 
-//        System.out.println("Aceptando pacientes...\n");
+
+////        System.out.println("Aceptando pacientes...\n");
         while(tokenizer.hasMoreTokens()){
             Paciente p = new Paciente(tokenizer.nextToken(), tokenizer.nextToken().trim(), tokenizer.nextToken().charAt(0));
             System.out.println(p);
             vh.add(p);
-
+            vh2.add(p);
         }
 
         System.out.println("Getting out one by one");
         int s = vh.size();
         for (int i=0; i < s; i++) {
+            System.out.println("\nJFC:");
             System.out.println(vh.remove());
-
+            System.out.println("\nVH 2:");
+            System.out.println(vh2.remove());
         }
-
     }
 
     private static String getDataFile() throws IOException, FileNotFoundException{

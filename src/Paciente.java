@@ -30,7 +30,8 @@ public class Paciente implements Comparable<Paciente> {
             System.out.println("this > o:\n");
             System.out.println(this.urgencia + " and " + o.getUrgencia());
             return -1;
-        } else return 0;
+        } else
+            return 0;
     }
 
     public char getUrgencia() {
@@ -38,6 +39,6 @@ public class Paciente implements Comparable<Paciente> {
     }
 
     public String toString(){
-        return this.nombre + " " + String.valueOf(this.urgencia);
+        return this.nombre + "\nCondicion: " + this.condicion + "\nUrgencia:" + this.getUrgencia();
     }
 }
