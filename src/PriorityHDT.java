@@ -24,7 +24,7 @@ public class PriorityHDT {
 ////        System.out.println("Aceptando pacientes...\n");
         while(tokenizer.hasMoreTokens()){
             Paciente p = new Paciente(tokenizer.nextToken(), tokenizer.nextToken().trim(), tokenizer.nextToken().charAt(0));
-            System.out.println(p);
+//            System.out.println(p);
             vh.add(p);
             vh2.add(p);
         }
